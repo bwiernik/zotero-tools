@@ -1,0 +1,144 @@
+[
+	{
+		"name": "CrossRef Lookup",
+		"alias": "CrossRef",
+		"icon": "https://www.crossref.org/favicon.ico",
+		"_urlTemplate": "http://crossref.org/openurl?{z:openURL}&pid=zter:zter321",
+		"description": "CrossRef Search Engine",
+		"hidden": false,
+		"_urlParams": [],
+		"_urlNamespaces": {
+			"z": "http://www.zotero.org/namespaces/openSearch#",
+			"": "http://a9.com/-/spec/opensearch/1.1/"
+		},
+		"_iconSourceURI": "http://crossref.org/favicon.ico"
+	},
+	{
+		"name": "Google Scholar Search",
+		"alias": "Google Scholar",
+		"icon": "http://scholar.google.com/favicon.ico",
+		"_urlTemplate": "http://scholar.google.com/scholar?as_q=&as_epq={z:title}&as_occt=title&as_sauthors={rft:aufirst?}+{rft:aulast?}&as_ylo={z:year?}&as_yhi={z:year?}&as_sdt=1.&as_sdtp=on&as_sdtf=&as_sdts=22&",
+		"description": "Google Scholar Search",
+		"hidden": false,
+		"_urlParams": [],
+		"_urlNamespaces": {
+			"rft": "info:ofi/fmt:kev:mtx:journal",
+			"z": "http://www.zotero.org/namespaces/openSearch#",
+			"": "http://a9.com/-/spec/opensearch/1.1/"
+		},
+		"_iconSourceURI": "http://scholar.google.com/favicon.ico"
+	},
+	{
+		"name": "Google Scholar - Title Only",
+		"alias": "Google Scholar",
+		"icon": "http://blogs.bellevue.edu/library/wp-content/uploads/2014/04/ghat.png",
+		"_urlTemplate": "http://scholar.google.com/scholar?as_q=&as_epq={z:title}&as_occt=title&as_sdt=1.&as_sdtp=on&as_sdtf=&as_sdts=22&",
+		"description": "Google Scholar Search - Title Only",
+		"hidden": false,
+		"_urlParams": [],
+		"_urlNamespaces": {
+			"rft": "info:ofi/fmt:kev:mtx:journal",
+			"z": "http://www.zotero.org/namespaces/openSearch#",
+			"": "http://a9.com/-/spec/opensearch/1.1/"
+		},
+		"_iconSourceURI": "http://blogs.bellevue.edu/library/wp-content/uploads/2014/04/ghat.png"
+	},
+	{
+		"name": "oaDOI",
+		"alias": "oaDOI",
+		"icon": "https://oadoi.org/static/img/favicon.png",
+		"_urlTemplate": "https://oadoi.org/{z:DOI}",
+		"description": "oaDOI Lookup",
+		"hidden": false,
+		"_urlParams": [],
+		"_urlNamespaces": {
+			"z": "http://www.zotero.org/namespaces/openSearch#"
+		},
+		"_iconSourceURI": "https://oadoi.org/static/img/favicon.png"
+	},
+	{
+		"name": "Sci-Hub DOI",
+		"alias": "Sci-Hub DOI",
+		"icon": "http://sci-hub.bz/favicon.ico",
+		"_urlTemplate": "http://sci-hub.bz/{z:DOI}",
+		"description": "SciHub DOI",
+		"hidden": false,
+		"_urlParams": [],
+		"_urlNamespaces": {
+			"z": "http://www.zotero.org/namespaces/openSearch#"
+		},
+		"_iconSourceURI": "http://sci-hub.bz/favicon.ico"
+	},
+	{
+		"name": "Sci-Hub URL",
+		"alias": "Sci-Hub URL",
+		"icon": "https://lh3.googleusercontent.com/sOX00LxhvUoMVoBEtSGXV9t10d57n4G1Q26wGc2nDmbh2l_elVUti-ULnTsUBnDlNM4_aab70w=s128-h128-e365",
+		"_urlTemplate": "http://sci-hub.bz/{z:url}",
+		"description": "SciHub URL",
+		"hidden": false,
+		"_urlParams": [],
+		"_urlNamespaces": {
+			"z": "http://www.zotero.org/namespaces/openSearch#"
+		},
+		"_iconSourceURI": "https://lh3.googleusercontent.com/sOX00LxhvUoMVoBEtSGXV9t10d57n4G1Q26wGc2nDmbh2l_elVUti-ULnTsUBnDlNM4_aab70w=s128-h128-e365"
+	},
+	{
+		"name": "Amazon.com Lookup",
+		"alias": "Amazon.com Lookup",
+		"icon": "http://www.amazon.com/favicon.ico",
+		"_urlTemplate": "http://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&unfiltered=1&field-author={rft:aufirst?}+{rft:aulast?}&field-title={rft:title}&tag=httpwwwdig0e7-20",
+		"description": "Look up books on Amazon.com",
+		"hidden": false,
+		"_urlParams": [],
+		"_method": "GET",
+		"_urlNamespaces": {
+			"rft": "info:ofi/fmt:kev:mtx:book",
+			"xmlns": "http://a9.com/-/spec/opensearch/1.1/"
+		},
+		"_iconSourceURI": "http://www.amazon.com/favicon.ico"
+	},
+	{
+		"name": "LibGen",
+		"alias": "LibGen",
+		"icon": "http://gen.lib.rus.ec/favicon.ico",
+		"_urlTemplate": "http://gen.lib.rus.ec/search.php?req={rft:aufirst?}+{rft:aulast?}+{rft:title?}+{z:ISBN?}",
+		"description": "Look up books on Library Genesis",
+		"hidden": false,
+		"_urlParams": [],
+		"_method": "GET",
+		"_urlNamespaces": {
+			"rft": "info:ofi/fmt:kev:mtx:book",
+			"xmlns": "http://a9.com/-/spec/opensearch/1.1/",
+			"z": "http://www.zotero.org/namespaces/openSearch#"
+		},
+		"_iconSourceURI": "http://gen.lib.rus.ec/favicon.ico"
+	},
+	{
+		"name": "Google Search",
+		"alias": "Google",
+		"icon": "https://www.google.com/favicon.ico",
+		"_urlTemplate": "https://www.google.com/#q={z:title}+{rft:aufirst?}+{rft:aulast?}",
+		"description": "Google Search",
+		"hidden": false,
+		"_urlParams": [],
+		"_urlNamespaces": {
+			"z": "http://www.zotero.org/namespaces/openSearch#"
+		},
+		"_iconSourceURI": "https://www.google.com/favicon.ico"
+	},
+	{
+		"name": "ProQuest",
+		"alias": "ProQuest",
+		"icon": "https://www.proquest.com/favicon.ico",
+		"_urlTemplate": "http://proquest.umi.com/pqdweb?SQ=TI(+{z:title}+)+YR(+{z:year?}+)&RQT=305&querySyntax=PQ&searchInterface=1&moreOptState=CLOSED&TS=1139706667&JSEnabled=1&DBId=-1",
+		"description": "ProQuest Search",
+		"hidden": false,
+		"_urlParams": [],
+		"_urlNamespaces": {
+			"rft": "info:ofi/fmt:kev:mtx:journal",
+			"z": "http://www.zotero.org/namespaces/openSearch#"
+		},
+		"_iconSourceURI": "http://www.proquest.com/favicon.ico"
+	}
+]
+
