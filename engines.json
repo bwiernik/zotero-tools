@@ -57,6 +57,19 @@
 		"_iconSourceURI": "https://oadoi.org/static/img/favicon.png"
 	},
 	{
+		"name": "DOAI",
+		"alias": "doai",
+		"icon": null,
+		"_urlTemplate": "https://doai.io/{z:DOI}",
+		"description": "oaDOI Lookup",
+		"hidden": false,
+		"_urlParams": [],
+		"_urlNamespaces": {
+			"z": "http://www.zotero.org/namespaces/openSearch#"
+		},
+		"_iconSourceURI": null
+	},
+	{
 		"name": "Sci-Hub DOI",
 		"alias": "Sci-Hub DOI",
 		"icon": "http://sci-hub.tw/favicon.ico",
