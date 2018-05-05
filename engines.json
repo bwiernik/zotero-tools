@@ -170,7 +170,7 @@
 	{
 		"name": "WOS Citing Articles",
 		"alias": "WOS Citing Articles",
-		"icon": "http://login.webofknowledge.com/error/WOK5/images/wok_favicon.ico",
+		"icon": "https://raw.githubusercontent.com/bwiernik/zotero-tools/master/locate_engines_icons/wok_favicon_citing.ico.png",
 		"_urlTemplate": "http://ws.isiknowledge.com/cps/openurl/service?url_ver=Z39.88-2004&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.citing=yes&{z:openURL}",
 		"description": "Web of Science Citing Articles Search",
 		"hidden": false,
@@ -184,7 +184,7 @@
 	{
 		"name": "WOS Related Articles",
 		"alias": "WOS Related Articles",
-		"icon": "http://login.webofknowledge.com/error/WOK5/images/wok_favicon.ico",
+		"icon": "https://raw.githubusercontent.com/bwiernik/zotero-tools/master/locate_engines_icons/wok_favicon_related.ico.png",
 		"_urlTemplate": "http://ws.isiknowledge.com/cps/openurl/service?url_ver=Z39.88-2004&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.related=yes&{z:openURL}",
 		"description": "Web of Science Related Articles Search",
 		"hidden": false,
