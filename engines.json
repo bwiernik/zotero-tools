@@ -57,19 +57,6 @@
 		"_iconSourceURI": "https://oadoi.org/static/img/favicon.png"
 	},
 	{
-		"name": "Sci-Hub",
-		"alias": "Sci-Hub",
-		"icon": "https://lh3.googleusercontent.com/sOX00LxhvUoMVoBEtSGXV9t10d57n4G1Q26wGc2nDmbh2l_elVUti-ULnTsUBnDlNM4_aab70w=s128-h128-e365",
-		"_urlTemplate": "http://sci-hub.tw/{z:DOI|z:url}",
-		"description": "SciHub Lookup",
-		"hidden": false,
-		"_urlParams": [],
-		"_urlNamespaces": {
-			"z": "http://www.zotero.org/namespaces/openSearch#"
-		},
-		"_iconSourceURI": "https://lh3.googleusercontent.com/sOX00LxhvUoMVoBEtSGXV9t10d57n4G1Q26wGc2nDmbh2l_elVUti-ULnTsUBnDlNM4_aab70w=s128-h128-e365"
-	},
-	{
 		"name": "Sci-Hub DOI",
 		"alias": "Sci-Hub DOI",
 		"icon": "http://sci-hub.tw/favicon.ico",
@@ -87,7 +74,7 @@
 		"alias": "Sci-Hub URL",
 		"icon": "https://lh3.googleusercontent.com/sOX00LxhvUoMVoBEtSGXV9t10d57n4G1Q26wGc2nDmbh2l_elVUti-ULnTsUBnDlNM4_aab70w=s128-h128-e365",
 		"_urlTemplate": "http://sci-hub.tw/{z:url}",
-		"description": "SciHub URL",
+		"description": "SciHub URL Lookup",
 		"hidden": false,
 		"_urlParams": [],
 		"_urlNamespaces": {
