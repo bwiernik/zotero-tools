@@ -181,5 +181,18 @@
 			"z": "http://www.zotero.org/namespaces/openSearch#"
 		},
 		"_iconSourceURI": "http://www.proquest.com/favicon.ico"
+	},
+	{
+		"name": "USF Interlibrary Loan",
+		"alias": "USF Interlibrary Loan",
+		"icon": "http://www.usf.edu/favicon.ico",
+		"_urlTemplate": "http://www.lib.usf.edu/illiad/illiad.php?{z:openURL}",
+		"description": "USF Interlibrary Loan Request",
+		"hidden": false,
+		"_urlParams": [],
+		"_urlNamespaces": {
+			"z": "http://www.zotero.org/namespaces/openSearch#"
+		},
+		"_iconSourceURI": "http://www.usf.edu/favicon.ico"
 	}
 ]
