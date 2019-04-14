@@ -186,7 +186,7 @@
 		"name": "USF Interlibrary Loan",
 		"alias": "USF Interlibrary Loan",
 		"icon": "http://www.usf.edu/favicon.ico",
-		"_urlTemplate": "http://www.lib.usf.edu/illiad/illiad.php?{z:openURL}",
+		"_urlTemplate": "https://usf.hosts.atlas-sys.com/illiad/illiad.dll?Action=10&Form=21&{z:openURL}",
 		"description": "USF Interlibrary Loan Request",
 		"hidden": false,
 		"_urlParams": [],
