@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" page-range-format="expanded">
+<style xmlns="http://purl.org/net/xbiblio/csl" class="note" version="1.0" demote-non-dropping-particle="never" page-range-format="expanded">
   <info>
-    <title>American Psychological Association 6th edition (numeric)</title>
-    <title-short>APA (numeric)</title-short>
-    <id>http://www.zotero.org/styles/apa-numeric</id>
-    <summary>APA style, with numeric in-text citations</summary>
-    <link href="http://www.zotero.org/styles/apa-numeric" rel="self"/>
+    <title>American Psychological Association 6th edition (full note)</title>
+    <title-short>APA (full note)</title-short>
+    <id>http://www.zotero.org/styles/apa-fullnote</id>
+    <summary>APA style, with citations formatted as full notes</summary>
+    <link href="http://www.zotero.org/styles/apa-fullnote" rel="self"/>
     <link href="http://www.zotero.org/styles/apa" rel="template"/>
     <link href="http://owl.english.purdue.edu/owl/resource/560/01/" rel="documentation"/>
-    <author>
+        <author>
       <name> Brenton M. Wiernik</name>
       <email>zotero@wiernik.org</email>
     </author>
@@ -30,7 +30,7 @@
     <contributor>
       <name>Sebastian Karcher</name>
     </contributor>
-    <category citation-format="numeric"/>
+    <category citation-format="note"/>
     <category field="psychology"/>
     <category field="generic-base"/>
     <updated>2019-05-28T13:09:49+00:00</updated>
@@ -778,7 +778,7 @@
           <!-- Replace "archive" with "archive_collection" as that becomes available -->
           <text variable="archive"/>
           <text variable="archive_location" prefix="(" suffix=")"/>
-        </group>         
+        </group>
       </group>
       <group delimiter=", ">
         <!-- Move "archive" here when "archive_collection" becomes available -->
@@ -843,7 +843,7 @@
                 </if>
               </choose>
             </if>
-            <else> 
+            <else>
               <group delimiter=": ">
                 <text variable="publisher-place"/>
                 <text variable="publisher"/>
@@ -1253,12 +1253,20 @@
           </else>
         </choose>
       </else-if>
-      <else-if type="book broadcast chapter entry entry-dictionary entry-encyclopedia graphic map speech" match="any">
+      <else-if type="book">
+        <choose>
+          <!-- book and software should not cite collection-title, only container-title -->
+          <if variable="container-title">
+            <text macro="container-booklike"/>
+          </if>
+        </choose>
+      </else-if>
+      <else-if type="broadcast chapter entry entry-dictionary entry-encyclopedia graphic map speech" match="any">
         <text macro="container-booklike"/>
       </else-if>
       <else-if type="bill legal_case legislation treaty" match="any">
         <text macro="legal-cites"/>
-      </else-if>     
+      </else-if>
     </choose>
   </macro>
   <macro name="container-booklike">
@@ -1434,12 +1442,80 @@
       </else-if>
     </choose>
   </macro>
-  <citation collapse="citation-number">
+  <citation et-al-min="8" et-al-use-first="6" et-al-use-last="true" et-al-subsequent-min="3" et-al-subsequent-use-first="1" disambiguate-add-year-suffix="true" disambiguate-add-names="true" disambiguate-add-givenname="true" collapse="year" givenname-disambiguation-rule="primary-name">
     <sort>
-      <key variable="citation-number"/>
+      <key macro="author" names-min="8" names-use-first="6"/>
+      <key macro="issued-sort"/>
+      <key macro="title"/>
     </sort>
-    <layout prefix="[" suffix="]" delimiter="," vertical-align="sup">
-      <text variable="citation-number"/>
+    <layout delimiter="; ">
+      <choose>
+        <if position="ibid ibid-with-locator subsequent" match="any">
+          <group delimiter=", ">
+            <text macro="author-short"/>
+            <text macro="issued-citation"/>
+            <text macro="citation-locator"/>
+          </group>
+        </if>
+        <else>
+          <group delimiter=", ">
+            <group>
+              <group suffix=".">
+                <group delimiter=". ">
+                  <text macro="author"/>
+                  <choose>
+                    <if is-uncertain-date="issued">
+                      <group prefix=" [" suffix="]" delimiter=" ">
+                        <text term="circa" form="short"/>
+                        <text macro="issued"/>
+                      </group>
+                    </if>
+                    <else>
+                      <text macro="issued" prefix=" (" suffix=")"/>
+                    </else>
+                  </choose>
+                  <group delimiter=" ">
+                    <text macro="title"/>
+                    <choose>
+                      <if variable="title interviewer" type="interview" match="any">
+                        <group delimiter=" ">
+                          <text macro="description"/>
+                          <text macro="format"/>
+                        </group>
+                      </if>
+                      <else>
+                        <group delimiter=" ">
+                          <text macro="format"/>
+                          <text macro="description"/>
+                        </group>
+                      </else>
+                    </choose>
+                  </group>
+                  <text macro="container"/>
+                </group>
+                <text macro="event" prefix=". "/>
+              </group>
+              <text macro="access" prefix=" "/>
+              <choose>
+                <if is-uncertain-date="original-date">
+                  <group prefix=" [" suffix="]" delimiter=" ">
+                    <text macro="original-published"/>
+                    <text term="circa" form="short"/>
+                    <text macro="original-date"/>
+                  </group>
+                </if>
+                <else-if variable="original-date">
+                  <group prefix=" (" suffix=")" delimiter=" ">
+                    <text macro="original-published"/>
+                    <text macro="original-date"/>
+                  </group>
+                </else-if>
+              </choose>
+            </group>
+            <text macro="citation-locator"/>
+          </group>
+        </else>
+      </choose>
     </layout>
   </citation>
   <bibliography hanging-indent="true" et-al-min="8" et-al-use-first="6" et-al-use-last="true" entry-spacing="0" line-spacing="2">
