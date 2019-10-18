@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" page-range-format="expanded">
   <info>
-    <title>American Psychological Association 6th edition (slide presentation)</title>
-    <title-short>APA (slide presentation)</title-short>
-    <id>http://www.zotero.org/styles/apa-slide-presentation</id>
-    <summary>APA style, with journal abbreviations given for in-text citations</summary>
+    <title>American Psychological Association 6th edition (DOI in text)</title>
+    <title-short>APA (DOI in text)</title-short>
+    <id>http://www.zotero.org/styles/apa-doi-in-text</id>
+    <summary>APA style, with DOIs, URLs, or publication abbreviations given for in-text citations</summary>
     <link href="http://www.zotero.org/styles/apa-slide-presentation" rel="self"/>
     <link href="http://www.zotero.org/styles/apa" rel="template"/>
     <link href="http://owl.english.purdue.edu/owl/resource/560/01/" rel="documentation"/>
@@ -1358,22 +1358,32 @@
   </macro>
   <macro name="container-title-short">
     <choose>
-      <if type="article article-journal article-magazine article-newspaper dataset" match="any">
-        <text variable="container-title" font-style="italic" form="short" text-case="title"/>
+      <if variable="DOI">
+        <text variable="DOI" prefix="https://doi.org/"/>
       </if>
-      <else-if type="paper-conference speech">
+      <else-if variable="URL">
+        <text variable="URL"/>
+      </else-if>
+      <else>
         <choose>
-          <if variable="collection-editor container-author editor" match="any">
-            <text variable="container-title" font-style="italic" form="short"/>
-          </if>
-          <else>
+          <if type="article article-journal article-magazine article-newspaper dataset" match="any">
             <text variable="container-title" font-style="italic" form="short" text-case="title"/>
-          </else>
-        </choose>
-      </else-if>
-      <else-if type="bill legal_case legislation post-weblog webpage" match="none">
-        <text variable="container-title" font-style="italic" form="short"/>
-      </else-if>
+          </if>
+          <else-if type="paper-conference speech">
+            <choose>
+              <if variable="collection-editor container-author editor" match="any">
+                <text variable="container-title" font-style="italic" form="short"/>
+              </if>
+              <else>
+                <text variable="container-title" font-style="italic" form="short" text-case="title"/>
+              </else>
+            </choose>
+          </else-if>
+          <else-if type="bill legal_case legislation post-weblog webpage" match="none">
+            <text variable="container-title" font-style="italic" form="short"/>
+          </else-if>
+        </else>
+      </else>
     </choose>
   </macro>
   <macro name="legal-cites">
