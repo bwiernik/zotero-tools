@@ -1471,7 +1471,7 @@
       <group delimiter=", ">
         <text macro="author-short"/>
         <text macro="issued-citation"/>
-        <text macros="container-title-short"/>
+        <text macro="container-title-short"/>
         <text macro="citation-locator"/>
       </group>
     </layout>

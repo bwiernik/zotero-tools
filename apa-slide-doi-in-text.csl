@@ -1382,7 +1382,7 @@
           <else-if type="bill legal_case legislation post-weblog webpage" match="none">
             <text variable="container-title" font-style="italic" form="short"/>
           </else-if>
-        </else>
+        </choose>
       </else>
     </choose>
   </macro>
@@ -1481,7 +1481,7 @@
       <group delimiter=", ">
         <text macro="author-short"/>
         <text macro="issued-citation"/>
-        <text macros="container-title-short"/>
+        <text macro="container-title-short"/>
         <text macro="citation-locator"/>
       </group>
     </layout>
