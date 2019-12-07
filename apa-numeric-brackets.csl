@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" page-range-format="expanded">
   <info>
-    <title>American Psychological Association 6th edition (numeric)</title>
-    <title-short>APA (numeric)</title-short>
+    <title>American Psychological Association 6th edition (numeric, brackets)</title>
+    <title-short>APA (numeric, brackets)</title-short>
     <id>http://www.zotero.org/styles/apa-numeric</id>
-    <summary>APA style, with numeric in-text citations</summary>
-    <link href="http://www.zotero.org/styles/apa-numeric" rel="self"/>
+    <summary>APA style, with numeric in-text citations in brackets</summary>
+    <link href="http://www.zotero.org/styles/apa-numeric-brackets" rel="self"/>
     <link href="http://www.zotero.org/styles/apa" rel="template"/>
     <link href="http://owl.english.purdue.edu/owl/resource/560/01/" rel="documentation"/>
     <author>
@@ -1438,7 +1438,7 @@
     <sort>
       <key variable="citation-number"/>
     </sort>
-    <layout delimiter="," vertical-align="sup">
+    <layout delimiter="," prefix="[" suffix="]">
       <text variable="citation-number"/>
     </layout>
   </citation>
