@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" page-range-format="expanded">
   <info>
-    <title>American Psychological Association 7th edition (numeric, brackets)</title>
-    <title-short>APA (numeric, brackets)</title-short>
-    <summary>APA style, with numeric in-text citations in brackets</summary>
-    <id>http://www.zotero.org/styles/apa-numeric-brackets</id>
-    <link href="https://raw.githubusercontent.com/bwiernik/zotero-tools/master/apa-numeric-brackets.csl" rel="self"/>
+    <title>American Psychological Association 7th edition (DOI in text)</title>
+    <title-short>APA (DOI in text)</title-short>
+    <summary>APA style, with DOIs, URLs, or publication abbreviations given for in-text citations</summary>
+    <id>http://www.zotero.org/styles/apa-doi-in-text</id>
+    <link href="https://raw.githubusercontent.com/bwiernik/zotero-tools/master/apa-doi-in-text.csl" rel="self"/>
     <link href="http://www.zotero.org/styles/apa" rel="template"/>
     <link href="https://apastyle.apa.org/style-grammar-guidelines/references/examples" rel="documentation"/>
     <author>
@@ -1324,6 +1324,42 @@
       </else-if>
     </choose>
   </macro>
+  <macro name="access-intext">
+    <choose>
+      <if variable="DOI">
+        <text variable="DOI" prefix="https://doi.org/"/>
+      </if>
+      <else-if variable="URL">
+        <text variable="URL"/>
+      </else-if>
+      <else>
+        <choose>
+          <if type="article-journal article-magazine article-newspaper post-weblog review review-book" match="any">
+            <!-- Periodical items -->
+            <text variable="container-title" font-style="italic" form="short" text-case="title"/>
+          </if>
+          <else-if type="paper-conference">
+            <!-- Determine if paper-conference is a periodical or booklike -->
+            <choose>
+              <if variable="editor editorial-director collection-editor container-author" match="any">
+                <text variable="container-title" font-style="italic" form="short"/>
+              </if>
+              <else>
+                <text variable="container-title" font-style="italic" form="short" text-case="title"/>
+              </else>
+            </choose>
+          </else-if>
+          <else-if type="post webpage" match="none">
+            <!-- post and webpage treat container-title like publisher -->
+            <text variable="container-title" font-style="italic" form="short"/>
+          </else-if>
+          <else>
+            <text variable="container-title" form="short"/>
+          </else>
+        </choose>
+      </else>
+    </choose>
+  </macro>
   <macro name="event">
     <choose>
       <if variable="event">
@@ -1617,49 +1653,58 @@
       <text variable="locator"/>
     </group>
   </macro>
-  <citation collapse="citation-number">
+  <citation et-al-min="3" et-al-use-first="1" disambiguate-add-year-suffix="true" disambiguate-add-names="true" disambiguate-add-givenname="true" collapse="year" givenname-disambiguation-rule="primary-name">
     <sort>
-      <key variable="citation-number"/>
+      <key macro="author-bib" names-min="3" names-use-first="1"/>
+      <key macro="date-sort-group"/>
+      <key macro="date-sort-date" sort="ascending"/>
+      <key variable="status"/>
     </sort>
-    <layout delimiter="," prefix="[" suffix="]">
-      <group>
-        <text variable="citation-number"/>
-        <text macro="citation-locator" prefix="(" suffix=")"/>
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <group delimiter=", ">
+        <text macro="author-intext"/>
+        <text macro="date-intext"/>
+        <text macro="access-intext"/>
+        <text macro="citation-locator"/>
       </group>
     </layout>
   </citation>
   <bibliography hanging-indent="true" et-al-min="21" et-al-use-first="19" et-al-use-last="true" entry-spacing="0" line-spacing="2">
+    <sort>
+      <key macro="author-bib"/>
+      <key macro="date-sort-group"/>
+      <key macro="date-sort-date" sort="ascending"/>
+      <key variable="status"/>
+      <key macro="title"/>
+    </sort>
     <layout>
-      <group delimiter=". ">
-        <text variable="citation-number"/>
-        <choose>
-          <if type="bill legal_case legislation treaty" match="any">
-            <!-- Legal items have different orders and delimiters -->
-            <choose>
-              <if variable="DOI URL" match="any">
-                <text macro="legal-cites"/>
-              </if>
-              <else>
-                <text macro="legal-cites" suffix="."/>
-              </else>
-            </choose>
-          </if>
-          <else>
-            <group delimiter=" ">
-              <group delimiter=". " suffix=".">
-                <text macro="author-bib"/>
-                <text macro="date-bib"/>
-                <text macro="title-and-descriptions"/>
-                <text macro="container"/>
-                <text macro="event"/>
-                <text macro="publisher"/>
-              </group>
-              <text macro="access"/>
-              <text macro="publication-history"/>
+      <choose>
+        <if type="bill legal_case legislation treaty" match="any">
+          <!-- Legal items have different orders and delimiters -->
+          <choose>
+            <if variable="DOI URL" match="any">
+              <text macro="legal-cites"/>
+            </if>
+            <else>
+              <text macro="legal-cites" suffix="."/>
+            </else>
+          </choose>
+        </if>
+        <else>
+          <group delimiter=" ">
+            <group delimiter=". " suffix=".">
+              <text macro="author-bib"/>
+              <text macro="date-bib"/>
+              <text macro="title-and-descriptions"/>
+              <text macro="container"/>
+              <text macro="event"/>
+              <text macro="publisher"/>
             </group>
-          </else>
-        </choose>
-      </group>
+            <text macro="access"/>
+            <text macro="publication-history"/>
+          </group>
+        </else>
+      </choose>
     </layout>
   </bibliography>
 </style>

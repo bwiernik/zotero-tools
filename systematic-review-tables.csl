@@ -3,8 +3,9 @@
   <info>
     <title>Systematic Review Tables</title>
     <title-short>Systematic Review Tables</title-short>
+    <summary>A minimal style for citing studies in systematic review tables</summary>
     <id>http://www.zotero.org/styles/systematic-review-tables</id>
-    <link href="http://www.zotero.org/styles/systematic-review-tables" rel="self"/>
+    <link href="https://raw.githubusercontent.com/bwiernik/zotero-tools/master/systematic-review-tables.csl" rel="self"/>
     <link href="http://www.zotero.org/styles/apa" rel="template"/>
     <author>
       <name> Brenton M. Wiernik</name>
@@ -19,16 +20,8 @@
       <name form="short" and="symbol" delimiter=", " initialize-with=". "/>
       <substitute>
         <names variable="editor"/>
-        <names variable="translator"/>
         <choose>
-          <if type="report">
-            <text variable="publisher"/>
-            <text variable="title" form="short" font-style="italic"/>
-          </if>
-          <else-if type="legal_case">
-            <text variable="title" font-style="italic"/>
-          </else-if>
-          <else-if type="book graphic  motion_picture song" match="any">
+          <else-if type="book graphic legal_case motion_picture report song" match="any">
             <text variable="title" form="short" font-style="italic"/>
           </else-if>
           <else-if type="bill legislation" match="any">
@@ -53,7 +46,7 @@
   </macro>
   <macro name="issued-sort">
     <choose>
-      <if type="article-journal bill book chapter graphic legal_case legislation motion_picture paper-conference report song dataset" match="none">
+      <if type="article-journal bill book chapter graphic legal_case legislation motion_picture paper-conference report song" match="none">
         <date variable="issued">
           <date-part name="year"/>
           <date-part name="month"/>
