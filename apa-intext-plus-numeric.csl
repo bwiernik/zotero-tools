@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" page-range-format="expanded">
   <info>
-    <title>American Psychological Association 7th edition (numeric, alphabetical)</title>
-    <title-short>APA (numeric, alphabetical)</title-short>
-    <summary>APA style, with numeric in-text citations, sorted alphabeticallly</summary>
-    <id>http://www.zotero.org/styles/apa-numeric-alphabetical</id>
-    <link href="https://raw.githubusercontent.com/bwiernik/zotero-tools/master/apa-numeric-alphabetical.csl" rel="self"/>
+    <title>American Psychological Association 7th edition (in-text + numeric)</title>
+    <title-short>APA (in-text + numeric)</title-short>
+    <summary>APA style, with numeric in-text citations</summary>
+    <id>http://www.zotero.org/styles/apa-in-text-plus-numeric</id>
+    <link href="https://raw.githubusercontent.com/bwiernik/zotero-tools/master/apa-in-text-plus-numeric.csl" rel="self"/>
     <link href="http://www.zotero.org/styles/apa" rel="template"/>
     <link href="https://apastyle.apa.org/style-grammar-guidelines/references/examples" rel="documentation"/>
     <author>
@@ -1667,21 +1667,18 @@
     <sort>
       <key variable="citation-number"/>
     </sort>
-    <layout delimiter="," vertical-align="sup">
+    <layout delimiter=";">
       <group>
-        <text variable="citation-number"/>
-        <text macro="citation-locator" prefix="(" suffix=")"/>
+        <group delimiter=", " prefix="(" suffix=")">
+          <text macro="author-intext"/>
+          <text macro="date-intext"/>
+          <text macro="citation-locator"/>
+        </group>
+        <text variable="citation-number" vertical-align="sup"/>
       </group>
     </layout>
   </citation>
   <bibliography hanging-indent="true" et-al-min="21" et-al-use-first="19" et-al-use-last="true" entry-spacing="0" line-spacing="2">
-    <sort>
-      <key macro="author-bib"/>
-      <key macro="date-sort-group"/>
-      <key macro="date-sort-date" sort="ascending"/>
-      <key variable="status"/>
-      <key macro="title"/>
-    </sort>
     <layout>
       <group delimiter=". ">
         <text variable="citation-number"/>
