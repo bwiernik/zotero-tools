@@ -9,4 +9,5 @@ Some CSL and Zotero-related links I search for a lot, stored here for easier acc
 - [CSL-M Specification](https://citeproc-js.readthedocs.io/en/latest/csl-m)
 
 - [Zotero-CSL Type Map](https://aurimasv.github.io/z2csl/typeMap.xml)
+- [Jurism-CSL Type Map](https://juris-m.github.io/z2csl/)
 - [Mendeley-CSL Type Map](https://service.elsevier.com/app/answers/detail/a_id/22175/supporthub/mendeley/)
