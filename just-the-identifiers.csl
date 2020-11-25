@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
+  <info>
+    <title>Just the Identifiers</title>
+    <id>a4e2bf30-2f26-11eb-adc1-0242ac120002</id>
+    <link href="https://raw.githubusercontent.com/bwiernik/zotero-tools/master/just-the-identifers.csl" rel="self"/>
+    <summary>Returns an identifier for cited items</summary>
+    <author>
+      <name>Brenton M. Wiernik</name>
+      <email>zotero@wiernik.org</email>
+    </author>
+    <category citation-format="label"/>
+    <category field="generic-base"/>
+    <updated>2020-11-25T13:40:35+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+  <citation>
+    <layout delimiter="&#13;">
+      <choose>
+        <if variable="DOI">
+          <text variable="DOI" prefix="https://doi.org/"/>
+        </if>
+        <else-if variable="PMCID">
+          <text variable="PMCID" prefix="https://www.ncbi.nlm.nih.gov/pmc/articles/"/>
+        </else-if>
+        <else-if variable="PMID">
+          <text variable="PMID" prefix="https://www.ncbi.nlm.nih.gov/pubmed/"/>
+        </else-if>
+        <else-if variable="URL">
+          <text variable="URL"/>
+        </else-if>
+        <else-if variable="URL">
+          <text variable="URL"/>
+        </else-if>
+        <else-if variable="title">
+          <text variable="title"/>
+        </else-if>
+        <else>
+          <text value="[No suitable identifer]"/>
+        </else>
+      </choose>
+    </layout>
+  </citation>
+  <bibliography>
+    <layout>
+      <choose>
+        <if variable="DOI">
+          <text variable="DOI"/>
+        </if>
+        <else-if variable="PMCID">
+          <text variable="PMCID"/>
+        </else-if>
+        <else-if variable="PMID">
+          <text variable="PMID"/>
+        </else-if>
+        <else-if variable="URL">
+          <text variable="URL"/>
+        </else-if>
+        <else-if variable="URL">
+          <text variable="URL"/>
+        </else-if>
+        <else-if variable="title">
+          <text variable="title"/>
+        </else-if>
+        <else>
+          <text value="[No suitable identifer]"/>
+        </else>
+      </choose>
+    </layout>
+  </bibliography>
+</style>
