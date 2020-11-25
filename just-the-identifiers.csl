@@ -3,7 +3,7 @@
   <info>
     <title>Just the Identifiers</title>
     <id>a4e2bf30-2f26-11eb-adc1-0242ac120002</id>
-    <link href="https://raw.githubusercontent.com/bwiernik/zotero-tools/master/just-the-identifers.csl" rel="self"/>
+    <link href="https://raw.githubusercontent.com/bwiernik/zotero-tools/master/just-the-identifiers.csl" rel="self"/>
     <summary>Returns an identifier for cited items</summary>
     <author>
       <name>Brenton M. Wiernik</name>
