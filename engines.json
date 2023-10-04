@@ -8,7 +8,7 @@
 		"_urlTemplate": "https://www.semanticscholar.org/search?q={z:title}+{rft:aufirst?}+{rft:aulast?}",
 		"_urlParams": [],
 		"_urlNamespaces": {
-			"z": "https://www.zotero.org/namespaces/openSearch#"
+			"z": "http://www.zotero.org/namespaces/openSearch#"
 		},
 		"_iconSourceURI": "https://www.semanticscholar.org/favicon.ico"
 	},
@@ -21,8 +21,8 @@
 		"_urlTemplate": "https://crossref.org/openurl?{z:openURL}&pid=zter:zter321",
 		"_urlParams": [],
 		"_urlNamespaces": {
-			"z": "https://www.zotero.org/namespaces/openSearch#",
-			"": "https://a9.com/-/spec/opensearch/1.1/"
+			"z": "http://www.zotero.org/namespaces/openSearch#",
+			"": "http://a9.com/-/spec/opensearch/1.1/"
 		},
 		"_iconSourceURI": "https://crossref.org/favicon.ico"
 	},
@@ -36,8 +36,8 @@
 		"_urlParams": [],
 		"_urlNamespaces": {
 			"rft": "info:ofi/fmt:kev:mtx:journal",
-			"z": "https://www.zotero.org/namespaces/openSearch#",
-			"": "https://a9.com/-/spec/opensearch/1.1/"
+			"z": "http://www.zotero.org/namespaces/openSearch#",
+			"": "http://a9.com/-/spec/opensearch/1.1/"
 		},
 		"_iconSourceURI": "https://scholar.google.com/favicon.ico"
 	},
@@ -51,8 +51,8 @@
 		"_urlParams": [],
 		"_urlNamespaces": {
 			"rft": "info:ofi/fmt:kev:mtx:journal",
-			"z": "https://www.zotero.org/namespaces/openSearch#",
-			"": "https://a9.com/-/spec/opensearch/1.1/"
+			"z": "http://www.zotero.org/namespaces/openSearch#",
+			"": "http://a9.com/-/spec/opensearch/1.1/"
 		},
 		"_iconSourceURI": "https://scholar.google.com/favicon.ico"
 	},
@@ -65,8 +65,8 @@
 		"_urlTemplate": "https://annas-archive.org/search?index=&q={z:title}+{rft:aufirst?}+{rft:aulast?}+{z:year?}",
 		"_urlParams": [],
 		"_urlNamespaces": {
-			"z": "https://www.zotero.org/namespaces/openSearch#",
-			"": "https://a9.com/-/spec/opensearch/1.1/"
+			"z": "http://www.zotero.org/namespaces/openSearch#",
+			"": "http://a9.com/-/spec/opensearch/1.1/"
 		},
 		"_iconSourceURI": "https://annas-archive.org/favicon.ico"
 	},
@@ -79,7 +79,7 @@
 		"_urlTemplate": "https://annas-archive.org/scidb/{z:DOI}?scidb_verified=1",
 		"_urlParams": [],
 		"_urlNamespaces": {
-			"z": "https://www.zotero.org/namespaces/openSearch#"
+			"z": "http://www.zotero.org/namespaces/openSearch#"
 		},
 		"_iconSourceURI": "https://annas-archive.org/favicon.ico"
 	},
@@ -92,7 +92,7 @@
 		"_urlTemplate": "https://oadoi.org/{z:DOI}",
 		"_urlParams": [],
 		"_urlNamespaces": {
-			"z": "https://www.zotero.org/namespaces/openSearch#"
+			"z": "http://www.zotero.org/namespaces/openSearch#"
 		},
 		"_iconSourceURI": "https://oadoi.org/static/img/favicon.png"
 	},
@@ -105,7 +105,7 @@
 		"_urlTemplate": "https://scihub.unblockit.esq/{z:DOI}",
 		"_urlParams": [],
 		"_urlNamespaces": {
-			"z": "https://www.zotero.org/namespaces/openSearch#"
+			"z": "http://www.zotero.org/namespaces/openSearch#"
 		},
 		"_iconSourceURI": "https://scihub.unblockit.esq/favicon.ico"
 	},
@@ -118,7 +118,7 @@
 		"_urlTemplate": "https://www.google.com/?q={z:title}+{rft:aufirst?}+{rft:aulast?}",
 		"_urlParams": [],
 		"_urlNamespaces": {
-			"z": "https://www.zotero.org/namespaces/openSearch#"
+			"z": "http://www.zotero.org/namespaces/openSearch#"
 		},
 		"_iconSourceURI": "https://www.google.com/favicon.ico"
 	}
