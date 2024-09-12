@@ -194,5 +194,20 @@
 			"z": "http://www.zotero.org/namespaces/openSearch#"
 		},
 		"_iconSourceURI": "http://www.usf.edu/favicon.ico"
+	}, 
+	{
+		"name": "CNKI Search",
+		"alias": "CNKI",
+		"icon": "https://www.cnki.net/favicon.ico",
+		"_urlTemplate": "https://kns.cnki.net/kns8/defaultresult/index?korder=TI&kw={z:title}",
+		"_description": "CNKI",
+		"_hidden": false,
+		"_urlParams": [],
+		"_urlNamespaces": {
+			"rft": "info:ofi/fmt:kev:mtx:journal",
+			"z": "http://www.zotero.org/namespaces/openSearch#",
+			"": "http://a9.com/-/spec/opensearch/1.1/"
+		},
+		"_iconSourceURI": "https://www.cnki.net/favicon.ico"
 	}
 ]
